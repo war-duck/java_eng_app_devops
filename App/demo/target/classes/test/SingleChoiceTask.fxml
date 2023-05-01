@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import javafx.scene.layout.VBox?>-->
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.SingleChoiceTaskController">
+   <VBox fx:id="taskElements">
+      <children>
+         <VBox alignment="CENTER" spacing="15.0"> 
+            <children>
+               <Label text="Wybierz prawidłową odpowiedź" style="-fx-font-size: 14px;"/>
+               <Label fx:id="questionContent" text="tmp" style="-fx-font-weight: bold; -fx-font-size: 20px;"/>
+            </children>
+         </VBox>
+         <GridPane fx:id="buttonGrid" alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+               <Button fx:id="buttonA" text="A" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#handleButtonPressed" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px; -fx-min-width: 100px; -fx-min-height: 30px;"/>
+               <Button fx:id="buttonB" text="B" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#handleButtonPressed" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px; -fx-min-width: 100px; -fx-min-height: 30px;"/>
+               <Button fx:id="buttonC" text="C" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#handleButtonPressed" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px; -fx-min-width: 100px; -fx-min-height: 30px;"/>
+               <Button fx:id="buttonD" text="D" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleButtonPressed" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px; -fx-min-width: 100px; -fx-min-height: 30px;"/>
+            </children>
+         </GridPane>
+      </children>
+   </VBox>
+   <Label fx:id="taskResult" style="-fx-background-color: green; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-font-size: 20px" visible="false"/>
+</VBox>
+<!--      <VBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Label text="Primary View" />
+            <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary" style="-fx-background-color: green; -fx-border-color: black; -fx-border-radius: 5px;"/>
+         </children>
+      </VBox>
+      -->
