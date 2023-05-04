@@ -1,4 +1,4 @@
 module-info.class
 test\SingleChoiceTaskController.class
-test\MainScreenController.class
 test\App.class
+test\MainScreenController.class

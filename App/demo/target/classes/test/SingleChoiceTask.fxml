@@ -8,7 +8,7 @@
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.SingleChoiceTaskController">
    <VBox fx:id="taskElements">
       <children>
-         <VBox alignment="CENTER" spacing="15.0">  <!---->
+         <VBox alignment="CENTER" spacing="15.0">
             <children>
                <Label text="Jednokrotny wybór" style="-fx-font-size: 14px;"/>
                <Label fx:id="questionContent" text="ERROR:nie można wczytać treści" style="-fx-font-weight: bold; -fx-font-size: 20px;"/>

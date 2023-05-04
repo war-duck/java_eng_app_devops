@@ -17,6 +17,7 @@ public class SingleChoiceTaskController
     @FXML private Label taskResult;       // info o poprawności odpowiedzi użytkownika
     @FXML private Button hintButton;
     @FXML private Label hintLabel;
+    @FXML private Button buttonA, buttonB, buttonC, buttonD;
     public void setCorrectAnswer(String correctAnswer)
     {
         this.correctAnswer = correctAnswer;
@@ -32,6 +33,13 @@ public class SingleChoiceTaskController
     public Label getQuestionContent()
     {
         return questionContent;
+    }
+    public void setOptionButtons(String[] buttonContent)
+    {
+        buttonA.setText(buttonContent[0]);
+        buttonB.setText(buttonContent[1]);
+        buttonC.setText(buttonContent[2]);
+        buttonD.setText(buttonContent[3]);
     }
     private void displayTaskResult(String userChosenAnswer) // zmienia dedykowaną Label taskResult
     {
