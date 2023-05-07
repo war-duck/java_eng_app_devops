@@ -50,7 +50,7 @@ public class SingleChoiceTaskController
         }
         else
         {
-            taskResult.setText("Odpowiedź błędna! Prawidłowa odpowiedź to " + correctAnswer); // tymczasowy, brzydki sposób. Przydałoby się zrobić coś lepszego, np osobną scenę
+            taskResult.setText("Odpowiedź błędna! Prawidłowa odpowiedź to '" + correctAnswer + "'"); // tymczasowy, brzydki sposób. Przydałoby się zrobić coś lepszego, np osobną scenę
             taskResult.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(5), Insets.EMPTY)));
         }
     }
