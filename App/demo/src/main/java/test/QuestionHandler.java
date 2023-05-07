@@ -2,16 +2,29 @@ package test;
 
 import javafx.fxml.FXMLLoader;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.net.URI;
 
 public class QuestionHandler {
     private static ArrayList<QuestionInfo> QuestionList;
-    public static void readFromFile(){
-        QuestionList = new ArrayList<>(2); //Tworzy listę na pytania
-        QuestionInfo questionInfo = new QuestionInfo();
-        String[] optionContent = {"dsa", "das", "test", "esc"};
-        questionInfo.setAll("test", "Który ciąg znaków?", "hint hint git gud", optionContent); //Dodaje informacje o pytaniu
-        QuestionList.add(questionInfo); //Dodaje pytanie do listy
+    public static void readFromFile(URI filePath) throws IOException{
+        QuestionList = new ArrayList<QuestionInfo>(2); //Tworzy listę na pytania
+        QuestionInfo questionInfo;
+        String[] splitInfo, optionButtonStrings;
+        List<String> Lines = Files.readAllLines(Paths.get(filePath));
+        for (String line : Lines)
+        {
+            questionInfo = new QuestionInfo();
+            splitInfo = line.split(";"); // info o pytaniu oddzielone jest ';'
+            optionButtonStrings = splitInfo[3].split("\\|"); // treść przycisków jest oddzielona '|'
+            questionInfo.setAll(splitInfo[0], splitInfo[1], splitInfo[2], optionButtonStrings);            
+            QuestionList.add(questionInfo); //Dodaje pytanie do listy
+        }
     }
 
     public static void writeToFile(){
@@ -19,7 +32,9 @@ public class QuestionHandler {
     }
 
     public static QuestionInfo getRandomQuestion(){
-        return QuestionList.get(0); //Tymczasowo funkcja zwraca pierwsze pytanie z listy, należy zrobić tak aby losowo wybierała pytanie z listy
+        Random random = new Random();
+        int randomNumber = random.nextInt(QuestionList.size()); // zwraca liczbę od 0 do questionList.size()
+        return QuestionList.get(randomNumber);
     }
 
     public static void sendTaskInfoToController(QuestionInfo questionInfo, FXMLLoader loader) // wysyła dane o zadaniu do kontrolera

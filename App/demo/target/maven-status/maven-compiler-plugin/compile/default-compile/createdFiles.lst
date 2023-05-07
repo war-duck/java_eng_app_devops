@@ -1,4 +1,9 @@
-module-info.class
-test\SingleChoiceTaskController.class
+test\FriendsScreenController.class
 test\App.class
+test\RankingScreenController.class
+module-info.class
+test\QuestionInfo.class
+test\SingleChoiceTaskController.class
+test\QuestionHandler.class
+test\SettingsScreenController.class
 test\MainScreenController.class
