@@ -1,7 +1,5 @@
 package test;
 
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -46,7 +44,7 @@ public class SingleChoiceTaskController
         if (userChosenAnswer.equals(this.correctAnswer)) // jezeli użytkownik odpowiedział poprawnie
         {
             taskResult.setText("Odpowiedź poprawna!"); // tymczasowy, brzydki sposób. Przydałoby się zrobić coś lepszego, np osobną scenę
-            taskResult.setBackground(new Background(new BackgroundFill(Color.GREEN, new CornerRadii(5), Insets.EMPTY)));
+            taskResult.setBackground(new Background(new BackgroundFill(Color.LAWNGREEN, new CornerRadii(5), Insets.EMPTY)));
         }
         else
         {
@@ -67,5 +65,9 @@ public class SingleChoiceTaskController
         hintButton.setVisible(false);
         hintButton.setManaged(false); // tak żeby treść label pojawiła się zamiast button, nie pod
         hintLabel.setVisible(true);
+    }
+    @FXML public void goBack()
+    {
+        SceneHandler.showScene("mainScreen");
     }
 }
