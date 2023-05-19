@@ -22,8 +22,6 @@ public class SceneHandler {
                 returnValue.loader.setLocation(SceneHandler.class.getResource(sceneName + ".fxml"));
                 if (returnValue.loader.getLocation() == null)
                     throw new IOException("Nieudana próba wczytania " + sceneName + ".fxml", null);
-                else
-                    returnValue.loader.load();
                 returnValue.scene = new Scene(returnValue.loader.load(), App.vSize, App.hSize);
                 variable.set(null, returnValue);
                 return returnValue;
