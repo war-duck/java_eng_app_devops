@@ -1,31 +1,40 @@
 package test;
 
 import javafx.application.Application;
-import javafx.scene.image.Image;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 public class App extends Application {
-    public static Stage stage;
-    public static final int vSize = 800;
-    public static final int hSize = 450;
+    private static Scene mainScreen;
+
     @Override
-    public void start(Stage receivedStage) throws IOException {
-        stage = receivedStage;
-        try {
-            QuestionHandler.readFromFile(getClass().getResource("SingleChoiceQuestions.txt").toURI()); // Wczytywanie pytań z pliku
-        }
-        catch (URISyntaxException exception) {
-            exception.printStackTrace();
-        }        
-        stage.getIcons().add(new Image(getClass().getResource("app_icon.png").toExternalForm())); //Ustawia ikonę aplikacji
-        stage.setTitle("Aplikacja do nauki języka angieskiego"); //Ustawia tytuł aplikacji
-        SceneHandler.showScene("mainScreen");
+    public void start(Stage stage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(); // nowy loader plików FXML
+        loader.setLocation(getClass().getResource("SingleChoiceTask.fxml")); // wskazujemy plik do załadowania
+        mainScreen = new Scene(loader.load(), 640, 360); // tymczasowo wczytuje od razu scene z pytaniem, mainScreen trzeba stworzyć // do mainscreena dodajemy nowy scene wczytany z pliku
+        QuestionInfo questionInfo = new QuestionInfo();
+        String[] optionContent = {"dsa", "das", "test", "esc"};
+        questionInfo.setAll("test", "Który ciąg znaków?", "hint hint git gud", optionContent);
+        sendTaskInfoToController(questionInfo, loader); // wysyłamy info o zadaniu do kontrolera danego pliku
+                                                                                                                                // correctAnswer i questionContent będą wczytywane z pliku
+        stage.setScene(mainScreen);
+
+        stage.show();
     }
 
-    public static void main(String[] args) {
+    private void sendTaskInfoToController(QuestionInfo questionInfo, FXMLLoader loader) // wysyła dane o zadaniu do kontrolera
+    {
+        SingleChoiceTaskController controller = loader.getController(); // znajdujemy obecną instancję kontrolera
+        controller.setCorrectAnswer(questionInfo.correctAnswer);
+        controller.setQuestionContent(questionInfo.questionContent);
+        controller.setHintContent(questionInfo.hintContent);
+        controller.setOptionButtons(questionInfo.answerOptions);
+    }
+    public static void main(String[] args)
+    {
         launch();
     }
 
