@@ -18,20 +18,19 @@ public class SingleChoiceTaskController
     @FXML private Button hintButton;
     @FXML private Label hintLabel;
     @FXML private Button buttonA, buttonB, buttonC, buttonD;
+    @FXML public void initialize() {
+    }
     public void setCorrectAnswer(String correctAnswer)
     {
         this.correctAnswer = correctAnswer;
     }
-    public void setQuestionContent(String questionContent)
-    {
+    public void setQuestionContent(String questionContent) {
+        this.questionContent.setWrapText(true);
         this.questionContent.setText(questionContent);
     }
     public void setHintContent(String hintContent)
     {
         this.hintLabel.setText(hintContent);
-    }
-    public Label getQuestionContent() {
-        return questionContent;
     }
     public void setOptionButtons(String[] buttonContent) {
         buttonA.setText(buttonContent[0]);
