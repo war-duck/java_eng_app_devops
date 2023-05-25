@@ -13,12 +13,14 @@ import java.io.IOException;
 public class SingleChoiceTaskController
 {
     private String correctAnswer;   // otrzymana z App w sendCorrectAnswerToController
+    private QuestionInfo questionInfo;
     @FXML private Label questionContent;
     @FXML private Label taskResult;       // info o poprawności odpowiedzi użytkownika
     @FXML private Button hintButton;
     @FXML private Label hintLabel;
     @FXML private Button buttonA, buttonB, buttonC, buttonD;
-    @FXML public void initialize() {
+    public void setQuestionInfo(QuestionInfo questionInfo) {
+        this.questionInfo = questionInfo;
     }
     public void setCorrectAnswer(String correctAnswer)
     {
@@ -53,14 +55,18 @@ public class SingleChoiceTaskController
     @FXML public void handleAnswerButtonPressed(ActionEvent userChosenAnswer) {
         taskResult.setVisible(false);
         Object source = userChosenAnswer.getSource();
-        if (source instanceof Button) // jeżeli funkcja została wywołana przez przycisk (powinna być)
+        if (source instanceof Button) {// jeżeli funkcja została wywołana przez przycisk (powinna być)
             displayTaskResult(((Button)source).getText()); // bierze tekst na przycisku klikniętym przez użytkownika
+            if (!(((Button)source).getText().equals(this.correctAnswer)))
+                QuestionHandler.addFailedQuestionID(this.questionInfo.questionID);
+        }
         taskResult.setVisible(true); // ujawnia Label z wiadomością
     }
     @FXML public void handleHintButtonPressed() {
         hintButton.setVisible(false);
         hintButton.setManaged(false); // tak żeby treść label pojawiła się zamiast button, nie pod
         hintLabel.setVisible(true);
+        QuestionHandler.addFailedQuestionID(this.questionInfo.questionID);
     }
     @FXML public void goBack() {
         try {

@@ -73,7 +73,9 @@ public class MWTest {
     @Test public void QuestionInfo_setAllTest() {
         QuestionInfo testQuestionInfo = new QuestionInfo();
         String[] testAnswerOptions = new String[]{"A","B","C","D"};
-        testQuestionInfo.setAll("correctAnswer", "questionContent", "hintContent", testAnswerOptions);
+        testQuestionInfo.setAll(0, "correctAnswer", "questionContent", "hintContent", testAnswerOptions);
+        if (!(testQuestionInfo.questionID == 0))
+            throw new AssertionError("Niepoprawnie ustawiona wartość questionID");
         if (!Arrays.equals(testQuestionInfo.answerOptions, testAnswerOptions))
             throw new AssertionError("Niepoprawnie ustawiona wartość answerOptions");
         if (!testQuestionInfo.questionContent.equals("questionContent"))
