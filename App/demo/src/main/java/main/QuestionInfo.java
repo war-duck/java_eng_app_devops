@@ -1,7 +1,5 @@
 package main;
 
-import javafx.fxml.FXMLLoader;
-
 public class QuestionInfo
 {
     public int questionID;

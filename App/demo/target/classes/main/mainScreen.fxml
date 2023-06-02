@@ -17,8 +17,9 @@
     <Label text="MENU" styleClass="PageTitle"/>
     <Button text="ĆWICZ" onAction="#startExercise"
             styleClass="StandardButton, BiggerButton, GreenElement"/> <!--trzeba stworzyć metodę w kontrolerze która wylosuje zadanie i przełączy widok na SingleChoiceTask-->
-    <Button text="Exam" onAction="#startExam"
+    <Button text="Test" onAction="#startExam"
             styleClass="StandardButton"/>
+    <Label fx:id="testInfoLabel" styleClass="StandardLabel, SmallerLabel"/>
     <Button text="Ranking" onAction="#openRanking"
             styleClass="StandardButton"/> <!--trzeba stworzyć metodę w kontrolerze która wylosuje zadanie i przełączy widok na SingleChoiceTask-->
     <Label fx:id="infoLabel" visible="false" styleClass="StandardLabel, HighVisLabel"/>

@@ -11,15 +11,16 @@ import java.net.URI;
 
 public class QuestionHandler {
     private QuestionHandler(){}
-    public static List<QuestionInfo> questionList = new ArrayList<QuestionInfo>(1);
+
+    private static final Random random = new Random();
+    protected static final List<QuestionInfo> questionList = new ArrayList<>(1);
     private static int maxQuestionID = 0;
 
     private static final Path failedQuestionsFilePath = Paths.get("src/main/resources/main/failedQuestions.txt");
-    private static final HashSet<Integer> failedQuestions = new HashSet<>();
+    private static final Set<Integer> failedQuestions = new HashSet<>();
     public static void readFromFile(URI filePath) throws IOException {
         if (filePath == null)
             throw new IOException("Niepoprawna (null) ścieżka do pliku", new Throwable("correctBehaviour"));
-        questionList = new ArrayList<>(); //Tworzy listę na pytania QuestionInfo
         QuestionInfo questionInfo;
         String[] splitInfo;
         String[] optionButtonStrings;
@@ -44,19 +45,17 @@ public class QuestionHandler {
     public static List<QuestionInfo> getQuestionList() {
         return questionList;
     }
-    public static HashSet<Integer> getFailedQuestionSet() {
+    public static Set<Integer> getFailedQuestionSet() {
         return failedQuestions;
     }
     public static void addFailedQuestionID (int questionID) {
         failedQuestions.add(questionID);
     }
     public static QuestionInfo getRandomQuestion() {
-        Random random = new Random();
         int randomNumber = random.nextInt(questionList.size()); // zwraca liczbę od 0 do questionList.size()
         return questionList.get(randomNumber);
     }
-    public static QuestionInfo getRandomFailedQuestion(HashSet<Integer> set) {
-        Random random = new Random();
+    public static QuestionInfo getRandomFailedQuestion(Set<Integer> set) {
         int randomNumber = random.nextInt(set.size());
         Iterator<Integer> iter = set.iterator();
         for (int i = 0; i < randomNumber && iter.hasNext(); ++i)
@@ -74,9 +73,9 @@ public class QuestionHandler {
         controller.setHintContent(questionInfo.hintContent);
         controller.setOptionButtons(questionInfo.answerOptions);
     }
-    private static HashSet<Integer> readQuestionIDFromLine (String line) {
+    private static Set<Integer> readQuestionIDFromLine (String line) {
         String[] prevFailedQuestions = line.split(";");
-        HashSet<Integer> questionIDSet = new HashSet<>();
+        Set<Integer> questionIDSet = new HashSet<>();
         for (String s : prevFailedQuestions) {
             try {
                 questionIDSet.add(Integer.parseInt(s));

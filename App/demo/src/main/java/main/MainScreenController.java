@@ -51,6 +51,6 @@ public class MainScreenController {
 
     private void showInfoLabel(String message, Boolean isVisible) {
         infoLabel.setText(message);
-        infoLabel.setVisible(true);
+        infoLabel.setVisible(isVisible);
     }
 }
