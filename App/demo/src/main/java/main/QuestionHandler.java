@@ -11,7 +11,7 @@ import java.net.URI;
 
 public class QuestionHandler {
     private QuestionHandler(){}
-    public static List<QuestionInfo> questionList = new ArrayList<QuestionInfo>();
+    public static List<QuestionInfo> questionList = new ArrayList<QuestionInfo>(1);
     private static int maxQuestionID = 0;
 
     private static final Path failedQuestionsFilePath = Paths.get("src/main/resources/main/failedQuestions.txt");
