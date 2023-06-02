@@ -1,5 +1,7 @@
 package main;
 
+import javafx.fxml.FXMLLoader;
+
 public class QuestionInfo
 {
     public int questionID;
@@ -15,5 +17,16 @@ public class QuestionInfo
         this.questionContent = questionContent;
         this.hintContent = hintContent;
         this.answerOptions = answerOptions.clone();
+    }
+    @Override
+    public String toString() {
+        return "ID: " + questionID
+            + ";\tcorrectAnswer: "      + correctAnswer
+            + ";\tquestionContent: "    + questionContent
+            + ";\thintContent: "        + hintContent
+            + ";\tanswerOptions"        + answerOptions[0] + "|"
+                                        + answerOptions[1] + "|"
+                                        + answerOptions[2] + "|"
+                                        + answerOptions[3];
     }
 }

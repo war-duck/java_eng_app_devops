@@ -29,10 +29,8 @@
       </GridPane>
    </VBox>
    <VBox alignment="CENTER"> <!-- VBox z elementami podpowiedzi -->
-      <children>
-         <Button fx:id="hintButton" text="PODPOWIEDŹ" onAction="#handleHintButtonPressed" styleClass="StandardButton, BiggerButton, YellowElement" />
-         <Label fx:id="hintLabel" text="ERROR:Nie można wczytać podpowiedzi" styleClass="StandardLabel, HighVisLabel" visible="false"/>
-      </children>
+      <Button fx:id="hintButton" text="PODPOWIEDŹ" onAction="#handleHintButtonPressed" styleClass="StandardButton, BiggerButton, YellowElement" />
+      <Label fx:id="hintLabel" text="ERROR:Nie można wczytać podpowiedzi" styleClass="StandardLabel, HighVisLabel" visible="false"/>
    </VBox>
    <VBox alignment="CENTER">
       <Label fx:id="taskResult" styleClass="StandardLabel, HighVisLabel" visible="false"/>

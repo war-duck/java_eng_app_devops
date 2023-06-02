@@ -20,7 +20,9 @@ public class App extends Application {
         catch (URISyntaxException exception) {
             exception.printStackTrace();
         }
-        stage.setOnCloseRequest(event -> {
+        if (!(QuestionHandler.createFailedQuestionFile())) // jeżeli nie utworzono pliku - bo istniał
+            QuestionHandler.addPrevFailedQuestionsFromFile(); // wczytujemy poprzednio źle wykonane zadania
+        stage.setOnCloseRequest(event -> { // wykona się przy próbie zamknięcia aplikacji
             try {
                 QuestionHandler.saveFailedQuestionsToFile();
             }

@@ -11,13 +11,14 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public class MWTest {
     @Test public void readFromFileTest() {
         try {
-            QuestionHandler.readFromFile(MWTest.class.getResource("testTaskContent.txt").toURI());
-            ArrayList<QuestionInfo> receivedList = QuestionHandler.getQuestionList();
+            QuestionHandler.readFromFile(Objects.requireNonNull(MWTest.class.getResource("testTaskContent.txt")).toURI());
+            ArrayList<QuestionInfo> receivedList = (ArrayList<QuestionInfo>) QuestionHandler.getQuestionList();
             if (receivedList.size() != 4)
                 throw new AssertionError("Niepoprawna ilość (" + receivedList.size() + ") wczytanych pytań");
             for (int i = 0; i < receivedList.size(); ++i) { // w żadnym pytaniu nie powinno być pustych wartości
