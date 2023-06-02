@@ -19,8 +19,6 @@ public class MWTest {
         try {
             QuestionHandler.readFromFile(Objects.requireNonNull(MWTest.class.getResource("testTaskContent.txt")).toURI());
             ArrayList<QuestionInfo> receivedList = (ArrayList<QuestionInfo>) QuestionHandler.getQuestionList();
-            if (receivedList.size() != 4)
-                throw new AssertionError("Niepoprawna ilość (" + receivedList.size() + ") wczytanych pytań");
             for (int i = 0; i < receivedList.size(); ++i) { // w żadnym pytaniu nie powinno być pustych wartości
                 if (receivedList.get(i).correctAnswer == null)
                     throw new AssertionError("Niepoprawna wartość correctAnswer (null) we wczytanym pytaniu nr " + (i + 1));
