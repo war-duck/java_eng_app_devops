@@ -8,7 +8,13 @@ import java.io.IOException;
 public class MainScreenController {
     @FXML
     Label infoLabel;
-
+    @FXML Label testInfoLabel;
+    public void initialize() {
+        if (QuestionHandler.getFailedQuestionSet().isEmpty())
+            testInfoLabel.setText("Brak zadań do powtórzenia");
+        else
+            testInfoLabel.setText("Zadań do powtórzenia: " + QuestionHandler.getFailedQuestionSet().size());
+    }
     public void startExercise() throws IOException {
         if (QuestionHandler.getQuestionList().isEmpty()) {
             showInfoLabel("Nie ma dostępnych pytań", true);
@@ -24,7 +30,7 @@ public class MainScreenController {
 
     public void startExam() throws IOException {
         if (QuestionHandler.getFailedQuestionSet().isEmpty()) {
-            showInfoLabel("Nie ma pytań do powtórzenia", true);
+            showInfoLabel("Nie ma zadań do powtórzenia", true);
             return;
         }
         showInfoLabel(null, false);

@@ -49,13 +49,9 @@ public class ExamHandler {
             endExam(true);
             return;
         }
-        else {
-            System.out.println(failedQuestionLocalSet.size() + "\n\n");
-        }
         currentQuestionInfo = QuestionHandler.getRandomFailedQuestion(failedQuestionLocalSet);
         System.out.println(currentQuestionInfo);
         startQuestion();
-        popCurrentQuestion();
     }
     public static void popCurrentQuestion() {
         failedQuestionLocalSet.remove(currentQuestionInfo.questionID);

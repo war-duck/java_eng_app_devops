@@ -90,6 +90,10 @@ public class ExamScreenController implements TaskControllerInterface {
     public void goBack() throws IOException {
         ExamHandler.endExam(false);
     }
+    @FXML
+    public void handleSkipButtonPressed() throws IOException {
+        ExamHandler.nextQuestion();
+    }
     public void setWordListLabelText(String message) {
         wordList.setText(message);
     }
