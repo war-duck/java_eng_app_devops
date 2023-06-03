@@ -11,6 +11,7 @@ public class App extends Application {
     public static Stage stage;
     public static final int vSize = 800;
     public static final int hSize = 450;
+    public static Difficulty questionDifficulty = Difficulty.EASY; //Domyślnie ustawiamy poziom trudności pytań na łatwe
     @Override
     public void start(Stage receivedStage) throws IOException {
         stage = receivedStage;

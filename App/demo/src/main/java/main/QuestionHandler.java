@@ -16,7 +16,7 @@ public class QuestionHandler {
     protected static final List<QuestionInfo> questionList = new ArrayList<>(1);
     private static int maxQuestionID = 0;
 
-    private static final Path failedQuestionsFilePath = Paths.get("src/main/resources/main/failedQuestions.txt");
+    public static Path failedQuestionsFilePath = Paths.get("src/main/resources/main/failedQuestions.txt");
     private static final Set<Integer> failedQuestions = new HashSet<>();
     public static void readFromFile(URI filePath) throws IOException {
         if (filePath == null)
@@ -24,21 +24,35 @@ public class QuestionHandler {
         QuestionInfo questionInfo;
         String[] splitInfo;
         String[] optionButtonStrings;
+        Difficulty questionDifficulty = null;
         int questionID;
         List<String> lines = Files.readAllLines(Paths.get(filePath));
         for (String line : lines)
         {
             questionInfo = new QuestionInfo();
             splitInfo = line.split(";"); // info o pytaniu oddzielone jest ';'
-            if (splitInfo.length != 5)
-                throw new IOException("Niepoprawna (" + splitInfo.length + ", oczekiwano 5) danych o zadaniu");
+            if (splitInfo.length != 6)
+                throw new IOException("Niepoprawna (" + splitInfo.length + ", oczekiwano 6) danych o zadaniu");
             questionID = Integer.parseInt(splitInfo[0]);
             if (questionID > maxQuestionID)
                 maxQuestionID = questionID;
-            optionButtonStrings = splitInfo[4].split("\\|"); // treść przycisków jest oddzielona '|'
+            optionButtonStrings = splitInfo[5].split("\\|"); // treść przycisków jest oddzielona '|'
             if (optionButtonStrings.length != 4)
                 throw new IOException("Niepoprawna ilość (" + optionButtonStrings.length + ", oczekiwano 4) odpowiedzi");
-            questionInfo.setAll(questionID, splitInfo[1], splitInfo[2], splitInfo[3], optionButtonStrings);
+            switch(splitInfo[1]){
+                case "easy":
+                    questionDifficulty = Difficulty.EASY;
+                    break;
+                case "medium":
+                    questionDifficulty = Difficulty.MEDIUM;
+                    break;
+                case "hard":
+                    questionDifficulty = Difficulty.HARD;
+                    break;
+                default:
+                    throw new IOException("Niepoprawna trudność pytania ("+splitInfo[1]+") możliwe do wyboru (easy, medium, hard)");
+            }
+            questionInfo.setAll(questionID, splitInfo[2], splitInfo[3], splitInfo[4], optionButtonStrings, questionDifficulty);
             questionList.add(questionID, questionInfo); //Dodaje pytanie do listy na indeksie questionID
         }
     }
@@ -51,9 +65,23 @@ public class QuestionHandler {
     public static void addFailedQuestionID (int questionID) {
         failedQuestions.add(questionID);
     }
+
+    public static List<QuestionInfo> getQuestionsWithSpecifiedDifficulty(Difficulty questionDifficulty){
+        List<QuestionInfo> outputQuestionList = new ArrayList<>(1);
+        for (int i = 0; i < questionList.size(); ++i){
+            if(questionList.get(i).questionDifficulty == questionDifficulty) {
+                outputQuestionList.add(questionList.get(i));
+            }
+        }
+        return outputQuestionList;
+    }
     public static QuestionInfo getRandomQuestion() {
-        int randomNumber = random.nextInt(questionList.size()); // zwraca liczbę od 0 do questionList.size()
-        return questionList.get(randomNumber);
+        List<QuestionInfo> selectedQuestions = getQuestionsWithSpecifiedDifficulty(App.questionDifficulty);
+        if(selectedQuestions.isEmpty()){
+            return null;
+        }
+        int randomNumber = random.nextInt(selectedQuestions.size()); // zwraca liczbę od 0 do questionList.size()
+        return selectedQuestions.get(randomNumber);
     }
     public static QuestionInfo getRandomFailedQuestion(Set<Integer> set) {
         int randomNumber = random.nextInt(set.size());

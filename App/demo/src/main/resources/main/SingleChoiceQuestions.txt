@@ -1,54 +1,53 @@
-0;A;A, B, C czy D?;should've known that one...;A|B|C|D
-1;through;The walk __ the forest was a nightmare;idk;through|though|thorough|throughout
-2;There're;__ too many people here.;There are;Their|There|They're|There're
-3;to;I'm going __ the beach;where?;to|too|two|into
-4;common;The word "onomatopoeia" refers to words that imitate _____ sounds.;Hint: Think of words like "buzz" or "hiss".;common|animal|human|musical
-5;best;What is the correct superlative form of the adjective "good"?;Hint: It ends with "-est".;best|better|goodest|more good
-6;they;Which of the following is a pronoun?;Hint: It starts with the letter "T".;they|action|beautiful|quickly
-7;to;"I am going to the store ____ buy some groceries." Fill in the blank with the correct conjunction.;Hint: It means "in order to".;to|and|but|or
-8;bought;Which of the following is an irregular verb in the past tense?;Hint: It starts with the letter "B".;bought|played|talked|watched
-9;more expensive;What is the comparative form of the adjective "expensive"?;Hint: It starts with the letter "M".;more expensive|expensiver|expensivest|expensiver
-10;meanings;The word "synonym" refers to words that have similar _______.;Hint: It starts with the letter "M".;meanings|sounds|origins|spellings
-11;finished;"She _____ her homework last night." Fill in the blank with the correct past tense form of the verb "finish".;Hint: It rhymes with "looked".;finished|finishes|finishing|finish
-12;because;Which of the following is a conjunction?;Hint: It starts with the letter "B".;because|happy|house|quick
-13;cats;"I have _____ cats." Fill in the blank with the correct plural form of the noun "cat".;Hint: It ends with "-es".;cats|cat's|caties|three
-14;common;The word "onomatopoeia" refers to words that imitate _____ sounds.;Hint: Think of words like "buzz" or "hiss".;common|animal|human|musical
-15;best;What is the correct superlative form of the adjective "good"?;Hint: It ends with "-est".;best|better|goodest|more good
-16;they;Which of the following is a pronoun?;Hint: It starts with the letter "T".;they|action|beautiful|quickly
-17;to;"I am going to the store ____ buy some groceries." Fill in the blank with the correct conjunction.;Hint: It means "in order to".;to|and|but|or
-18;bought;Which of the following is an irregular verb in the past tense?;Hint: It starts with the letter "B".;bought|played|talked|watched
-19;more expensive;What is the comparative form of the adjective "expensive"?;Hint: It starts with the letter "M".;more expensive|expensiver|expensivest|expensiver
-20;meanings;The word "synonym" refers to words that have similar _______.;Hint: It starts with the letter "M".;meanings|sounds|origins|spellings
-21;finished;"She _____ her homework last night." Fill in the blank with the correct past tense form of the verb "finish".;Hint: It rhymes with "looked".;finished|finishes|finishing|finish
-22;because;Which of the following is a conjunction?;Hint: It starts with the letter "B".;because|happy|house|quick
-23;cats;"I have _____ cats." Fill in the blank with the correct plural form of the noun "cat".;Hint: It ends with "-es".;cats|cat's|caties|three
-24;common;The word "ubiquitous" means something that is _____.;Hint: It describes something that is present everywhere.;common|rare|hidden|fragile
-25;taller;What is the correct comparative form of the adjective "tall"?;Hint: It ends with "-er".;taller|more tall|tallest|tallest
-26;slowly;Which of the following is an adverb?;Hint: It starts with the letter "S".;slowly|jumped|yellow|friend
-27;for;"I am going to the library ____ study for my exam." Fill in the blank with the correct preposition.;Hint: It means "for the purpose of".;for|at|with|to
-28;walked;Which of the following is a regular verb in the past tense?;Hint: It starts with the letter "W".;walked|ate|sang|wrote
-29;most exciting;What is the superlative form of the adjective "exciting"?;Hint: It ends with "-est".;most exciting|excitingest|excitinger|more exciting
-30;words;The word "vocabulary" refers to a collection of _____.;Hint: It starts with the letter "W".;words|sentences|books|ideas
-31;came;"They ______ to the party last night." Fill in the blank with the correct past tense form of the verb "come".;Hint: It rhymes with "tum".;came|comes|coming|come
-32;Wow!;Which of the following is an interjection?;Hint: It starts with the letter "W".;Wow!|running|quickly|dog
-33;for;"She has been studying English _____ five years." Fill in the blank with the correct preposition.;Hint: It means "for a duration of".;for|at|since|until
-34;communicate;The word "eloquent" means having the ability to _____.;Hint: It starts with the letter "C".;communicate|run|sleep|hide
-35;more intelligent;What is the correct comparative form of the adjective "intelligent"?;Hint: It starts with the letter "S".;more intelligent|intelligenter|intelligentest|smart
-36;mine;Which of the following is a possessive pronoun?;Hint: It starts with the letter "M".;mine|laughed|yellow|tree
-37;at;"I will meet you _____ the park." Fill in the blank with the correct preposition.;Hint: It means "at a specific location".;at|in|on|under
-38;sad;What is the antonym of the word "happy"?;Hint: It starts with the letter "S".;sad|joyful|excited|content
-39;joins;The word "conjunction" refers to a part of speech that _____.;Hint: It connects words, phrases, or clauses.;joins|describes|repeats|creates
-40;was waiting;"I ______ for the bus when it started raining." Fill in the blank with the correct progressive form of the verb "wait".;Hint: It rhymes with "was eating".;was waiting|waits|waited|waiting
-41;beautiful;Which of the following is an adjective?;Hint: It starts with the letter "B".;beautiful|running|quickly|cat
-42;children;What is the plural form of the noun "child"?;Hint: It starts with the letter "C".;children|childs|childies|child's
-43;prettier;"She is ______ than her sister." Fill in the blank with the correct comparative form of the adjective "pretty".;Hint: It means "more attractive".;prettier|pretty|prettiest|prettyer
-44;language;The word "grammar" refers to the rules that govern _____.;Hint: It starts with the letter "L".;language|music|art|mathematics
-45;had;"We ______ a great time at the party." Fill in the blank with the correct past tense form of the verb "have".;Hint: It rhymes with "danced".;had|has|having|have
-46;quickly;Which of the following is an adverb?;Hint: It starts with the letter "Q".;quickly|sang|yellow|book
-47;in;"I am interested _____ learning new languages." Fill in the blank with the correct preposition.;Hint: It means "in relation to".;in|on|at|with
-48;small;What is the antonym of the word "big"?;Hint: It starts with the letter "S".;small|large|giant|huge
-49;words;The word "pronunciation" refers to the way _____.;Hint: It starts with the letter "W".;words|people|animals|colors
-50;most famous;What is the correct superlative form of the adjective "famous"?;Hint: It starts with the letter "M".;most famous|famouser|famousest|more famous
-51;a;Which of the following is an indefinite article?;Hint: It starts with the letter "A".;a|the|an|for
-52;improving;"I am ________ my English skills." Fill in the blank with the correct present participle form of the verb "improve".;Hint: It ends with "-ing".;improving|improves|improved|improve
-53;book;Which of the following is a noun?;Hint: It starts with the letter "B".;book|running|quickly|dog
+0;easy;A;A, B, C czy D?;should've known that one...;A|B|C|D
+1;easy;through;The walk __ the forest was a nightmare;idk;through|though|thorough|throughout
+2;easy;There're;__ too many people here.;There are;Their|There|They're|There're
+3;easy;to;I'm going __ the beach;where?;to|too|two|into
+4;medium;common;The word "onomatopoeia" refers to words that imitate _____ sounds.;Hint: Think of words like "buzz" or "hiss".;common|animal|human|musical
+5;easy;best;What is the correct superlative form of the adjective "good"?;Hint: It ends with "-est".;best|better|goodest|more good
+6;easy;they;Which of the following is a pronoun?;Hint: It starts with the letter "T".;they|action|beautiful|quickly
+7;easy;to;"I am going to the store ____ buy some groceries." Fill in the blank with the correct conjunction.;Hint: It means "in order to".;to|and|but|or
+8;medium;bought;Which of the following is an irregular verb in the past tense?;Hint: It starts with the letter "B".;bought|played|talked|watched
+9;medium;more expensive;What is the comparative form of the adjective "expensive"?;Hint: It starts with the letter "M".;more expensive|expensiver|expensivest|expensiver
+10;medium;meanings;The word "synonym" refers to words that have similar _______.;Hint: It starts with the letter "M".;meanings|sounds|origins|spellings
+11;easy;finished;"She _____ her homework last night." Fill in the blank with the correct past tense form of the verb "finish".;Hint: It rhymes with "looked".;finished|finishes|finishing|finish
+12;hard;because;Which of the following is a conjunction?;Hint: It starts with the letter "B".;because|happy|house|quick
+13;easy;cats;"I have three _____." Fill in the blank with the correct plural form of the noun "cat".;Hint: It ends with "-es".;cats|cat's|caties|three
+14;medium;best;What is the correct superlative form of the adjective "good"?;Hint: It ends with "-est".;best|better|goodest|more good
+15;medium;they;Which of the following is a pronoun?;Hint: It starts with the letter "T".;they|action|beautiful|quickly
+16;easy;to;"I am going to the store ____ buy some groceries." Fill in the blank with the correct conjunction.;Hint: It means "in order to".;to|and|but|or
+17;medium;cut;Which of the following is an irregular verb in the past tense?;Hint: It starts with the letter "C".;cut|worked|jumped|signed
+18;hard;get;She left the lights on overnight and in the morning couldn't _____ the car started.;Hint: It starts with the letter "G".;have|get|got|have got
+19;easy;meanings;Cyclist _____ a bike.;Hint: It starts with the letter "r".;drives|drove|rides|walks
+20;easy;finished;"She _____ her homework last night." Fill in the blank with the correct past tense form of the verb "finish".;Hint: It rhymes with "looked".;finished|finishes|finishing|finish
+21;easy;eat;Which of the following is a verb?;Hint: It starts with the letter "e".;eat|ship|earth|quickly
+22;hard;will have finished;Call me after eight o'clock, we _____ dinner by then.;Hint: Use Future Perfect.;finished|finishing|will have finished|ate
+23;hard;common;The word "ubiquitous" means something that is _____.;Hint: It describes something that is present everywhere.;common|rare|hidden|fragile
+24;easy;taller;What is the correct comparative form of the adjective "tall"?;Hint: It ends with "-er".;taller|more tall|tallest|tallest
+25;easy;slowly;Which of the following is an adverb?;Hint: It starts with the letter "S".;slowly|jumped|yellow|friend
+26;easy;for;"I am going to the library ____ study for my exam." Fill in the blank with the correct preposition.;Hint: It means "for the purpose of".;for|at|with|to
+27;easy;walked;Which of the following is a regular verb in the past tense?;Hint: It starts with the letter "W".;walked|ate|sang|wrote
+28;easy;most exciting;What is the superlative form of the adjective "exciting"?;Hint: It ends with "-est".;most exciting|excitingest|excitinger|more exciting
+29;medium;words;The word "vocabulary" refers to a collection of _____.;Hint: It starts with the letter "W".;words|sentences|books|ideas
+30;easy;came;"They ______ to the party last night." Fill in the blank with the correct past tense form of the verb "come".;Hint: It rhymes with "tum".;came|comes|coming|come
+31;hard;Wow!;Which of the following is an interjection?;Hint: It starts with the letter "W".;Wow!|running|quickly|dog
+32;easy;for;"She has been studying English _____ five years." Fill in the blank with the correct preposition.;Hint: It means "for a duration of".;for|at|since|until
+33;hard;communicate;The word "eloquent" means having the ability to _____.;Hint: It starts with the letter "C".;communicate|run|sleep|hide
+34;easy;more intelligent;What is the correct comparative form of the adjective "intelligent"?;Hint: It starts with the letter "S".;more intelligent|intelligenter|intelligentest|smart
+35;medium;mine;Which of the following is a possessive pronoun?;Hint: It starts with the letter "M".;mine|laughed|yellow|tree
+36;easy;at;"I will meet you _____ the park." Fill in the blank with the correct preposition.;Hint: It means "at a specific location".;at|in|on|under
+37;easy;sad;What is the antonym of the word "happy"?;Hint: It starts with the letter "S".;sad|joyful|excited|content
+38;medium;joins;The word "conjunction" refers to a part of speech that _____.;Hint: It connects words, phrases, or clauses.;joins|describes|repeats|creates
+39;easy;was waiting;"I ______ for the bus when it started raining." Fill in the blank with the correct progressive form of the verb "wait".;Hint: It rhymes with "was eating".;was waiting|waits|waited|waiting
+40;easy;beautiful;Which of the following is an adjective?;Hint: It starts with the letter "B".;beautiful|running|quickly|cat
+41;easy;children;What is the plural form of the noun "child"?;Hint: It starts with the letter "C".;children|childs|childies|child's
+42;easy;prettier;"She is ______ than her sister." Fill in the blank with the correct comparative form of the adjective "pretty".;Hint: It means "more attractive".;prettier|pretty|prettiest|prettyer
+43;medium;language;The word "grammar" refers to the rules that govern _____.;Hint: It starts with the letter "L".;language|music|art|mathematics
+44;easy;had;"We ______ a great time at the party." Fill in the blank with the correct past tense form of the verb "have".;Hint: It rhymes with "danced".;had|has|having|have
+45;easy;quickly;Which of the following is an adverb?;Hint: It starts with the letter "Q".;quickly|sang|yellow|book
+46;easy;in;"I am interested _____ learning new languages." Fill in the blank with the correct preposition.;Hint: It means "in relation to".;in|on|at|with
+47;easy;small;What is the antonym of the word "big"?;Hint: It starts with the letter "S".;small|large|giant|huge
+48;medium;words;The word "pronunciation" refers to the way _____.;Hint: It starts with the letter "W".;words|people|animals|colors
+49;easy;most famous;What is the correct superlative form of the adjective "famous"?;Hint: It starts with the letter "M".;most famous|famouser|famousest|more famous
+50;hard;a;Which of the following is an indefinite article?;Hint: It starts with the letter "A".;a|the|an|for
+51;easy;improving;"I am ________ my English skills." Fill in the blank with the correct present participle form of the verb "improve".;Hint: It ends with "-ing".;improving|improves|improved|improve
+52;easy;book;Which of the following is a noun?;Hint: It starts with the letter "B".;book|running|quickly|fast
