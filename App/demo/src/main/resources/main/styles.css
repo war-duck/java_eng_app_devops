@@ -19,6 +19,15 @@
     -fx-min-width: 120px;
     -fx-font-size: 16px;
 }
+.EasyButton{
+    -fx-background-color: lawngreen;
+}
+.MediumButton{
+    -fx-background-color: darkorange;
+}
+.HardButton{
+    -fx-background-color: crimson;
+}
 .GreenElement { /* żeby wszędzie były dokładnie takie same kolory */
     -fx-background-color: lawngreen;
     -fx-text-fill: white;

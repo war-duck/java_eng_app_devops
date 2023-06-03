@@ -1,4 +1,4 @@
-0;ĘÓĄŚŁŻŹŃ;ęóąśłżźń;;A|B|C|D
-1;through;The walk __ the forest was a nightmare;idk;through|though|thorough|throughout
-2;There're;__ too many people here.;There are;Their|There|They're|There're
-3;to;I'm going __ the beach;where?;to|too|two|into
+0;easy;ĘÓĄŚŁŻŹŃ;ęóąśłżźń;;A|B|C|D
+1;medium;through;The walk __ the forest was a nightmare;idk;through|though|thorough|throughout
+2;hard;There're;__ too many people here.;There are;Their|There|They're|There're
+3;easy;to;I'm going __ the beach;where?;to|too|two|into

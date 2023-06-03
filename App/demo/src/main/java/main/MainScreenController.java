@@ -23,6 +23,12 @@ public class MainScreenController {
         showInfoLabel(null, false);
         SceneInfo sceneInfo = SceneHandler.getSceneInfo("singleChoiceTask");
         QuestionInfo questionInfo = QuestionHandler.getRandomQuestion(); // Wybieramy losowo pytanie z dostępnej puli pytań
+        if(questionInfo == null){
+            showInfoLabel("Nie ma zadań w wybranym poziomie trudności", true);
+            return;
+        }else{
+            showInfoLabel("", false);
+        }
         QuestionHandler.sendTaskInfoToController(questionInfo, sceneInfo.loader); // wysyłamy info o zadaniu do kontrolera danego pliku
         App.stage.setScene(sceneInfo.scene);
         App.stage.show();
@@ -42,7 +48,11 @@ public class MainScreenController {
     }
 
     public void openSettings() throws IOException {
-        SceneHandler.showScene("settingsScreen");
+        SceneInfo sceneInfo = SceneHandler.getSceneInfo("settingsScreen");
+        SettingsScreenController settingsScreenController = sceneInfo.loader.getController();// Tworzymy instancję kontrolera
+        settingsScreenController.setCurrentDifficulty();// Uruchamiamy funkcję która ustawia kolor odpowiedniego przycisku zależnie od obecnej trudności
+        App.stage.setScene(sceneInfo.scene);
+        App.stage.show();
     }
 
     public void openFriends() throws IOException {
