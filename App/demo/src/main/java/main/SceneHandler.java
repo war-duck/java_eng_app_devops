@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
 public class SceneHandler {
+    private SceneHandler(){}
     public static SceneInfo getSceneInfo (String sceneName) throws IOException {
         try {
             SceneInfo returnValue = new SceneInfo(sceneName, new FXMLLoader(), null);
@@ -21,8 +22,10 @@ public class SceneHandler {
         }
     }
 
-    public static void showScene (String sceneName) throws IOException {
-        App.stage.setScene(getSceneInfo(sceneName).scene);
+    public static SceneInfo showScene (String sceneName) throws IOException {
+        SceneInfo sceneInfo = getSceneInfo(sceneName);
+        App.stage.setScene(sceneInfo.scene);
         App.stage.show();
+        return sceneInfo;
     }
 }

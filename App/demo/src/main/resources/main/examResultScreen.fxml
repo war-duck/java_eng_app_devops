@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ExamScreenController" stylesheets="@styles.css">
+    <Label text="Wyniki" styleClass="StandardLabel, MainLabel"/>
+    <Label fx:id="wordNumber" styleClass="StandardLabel"/>
+    <Label fx:id="wordList" styleClass="StandardLabel"/>
+    <Button text="Ok." styleClass="StandardButton, BiggerButton, GreenElement" onAction="#goBack"/>
+</VBox>

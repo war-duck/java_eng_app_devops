@@ -1,10 +1,13 @@
-main\QuestionInfo.class
 main\SceneInfo.class
 main\FriendsScreenController.class
-main\App.class
+main\ExamHandler.class
 module-info.class
 main\SingleChoiceTaskController.class
 main\SceneHandler.class
+main\TaskControllerInterface.class
+main\QuestionInfo.class
+main\ExamScreenController.class
+main\App.class
 main\MainScreenController.class
 main\RankingScreenController.class
 main\QuestionHandler.class

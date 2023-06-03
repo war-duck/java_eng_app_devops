@@ -1,11 +1,9 @@
 package main;
 
-import javafx.event.ActionEvent;
-
 import java.io.IOException;
 
 public class RankingScreenController {
-    public void goBack(ActionEvent actionEvent) throws IOException {
+    public void goBack() throws IOException {
         SceneHandler.showScene("mainScreen");
     }
 }

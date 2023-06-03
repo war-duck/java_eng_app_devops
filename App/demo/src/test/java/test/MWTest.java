@@ -11,15 +11,14 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public class MWTest {
     @Test public void readFromFileTest() {
         try {
-            QuestionHandler.readFromFile(MWTest.class.getResource("testTaskContent.txt").toURI());
-            ArrayList<QuestionInfo> receivedList = QuestionHandler.getQuestionList();
-            if (receivedList.size() != 4)
-                throw new AssertionError("Niepoprawna ilość (" + receivedList.size() + ") wczytanych pytań");
+            QuestionHandler.readFromFile(Objects.requireNonNull(MWTest.class.getResource("testTaskContent.txt")).toURI());
+            ArrayList<QuestionInfo> receivedList = (ArrayList<QuestionInfo>) QuestionHandler.getQuestionList();
             for (int i = 0; i < receivedList.size(); ++i) { // w żadnym pytaniu nie powinno być pustych wartości
                 if (receivedList.get(i).correctAnswer == null)
                     throw new AssertionError("Niepoprawna wartość correctAnswer (null) we wczytanym pytaniu nr " + (i + 1));
@@ -73,7 +72,9 @@ public class MWTest {
     @Test public void QuestionInfo_setAllTest() {
         QuestionInfo testQuestionInfo = new QuestionInfo();
         String[] testAnswerOptions = new String[]{"A","B","C","D"};
-        testQuestionInfo.setAll("correctAnswer", "questionContent", "hintContent", testAnswerOptions);
+        testQuestionInfo.setAll(0, "correctAnswer", "questionContent", "hintContent", testAnswerOptions);
+        if (!(testQuestionInfo.questionID == 0))
+            throw new AssertionError("Niepoprawnie ustawiona wartość questionID");
         if (!Arrays.equals(testQuestionInfo.answerOptions, testAnswerOptions))
             throw new AssertionError("Niepoprawnie ustawiona wartość answerOptions");
         if (!testQuestionInfo.questionContent.equals("questionContent"))

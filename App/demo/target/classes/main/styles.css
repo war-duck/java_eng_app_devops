@@ -69,3 +69,6 @@
     -fx-font-style: normal;
     -fx-font-size: 30px;
 }
+.SmallerLabel {
+    -fx-font-size: 10px;
+}
